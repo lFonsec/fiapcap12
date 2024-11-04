@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Lucas Da Fonseca Costa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -316.8,
+      "left": -292.76,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -450.9,
+      "left": -322.2,
+      "attrs": { "humidity": "100", "temperature": "80" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "dht1:GND", "black", [ "h28.8", "v-67.2" ] ],
+    [ "dht1:SDA", "esp:23", "green", [ "v9.6", "h96.1", "v48", "h9.6" ] ],
+    [ "dht1:VCC", "esp:5V", "red", [ "v134.4", "h96", "v9.6" ] ]
+  ],
+  "dependencies": {}
+}
