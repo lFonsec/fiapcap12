@@ -11,7 +11,42 @@
       "left": -63,
       "attrs": { "temperature": "75", "humidity": "9" }
     },
-    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -142.5, "left": 91.9, "attrs": {} }
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -142.5,
+      "left": 91.9,
+      "attrs": { "distance": "151" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -42, "left": 263, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 90.35,
+      "left": 230.4,
+      "attrs": { "value": "150" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -130.4,
+      "left": 309.42,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 131,
+      "left": 403.2,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -132,
+      "left": 405,
+      "attrs": { "volume": "0.1" }
+    }
   ],
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
@@ -22,7 +57,17 @@
     [ "esp:GND.2", "ultrasonic1:GND", "black", [ "v-48", "h92.44" ] ],
     [ "esp:5V", "ultrasonic1:VCC", "red", [ "h-4.61", "v48", "h144" ] ],
     [ "esp:22", "ultrasonic1:TRIG", "green", [ "h0" ] ],
-    [ "ultrasonic1:ECHO", "esp:21", "green", [ "v0" ] ]
+    [ "ultrasonic1:ECHO", "esp:21", "green", [ "v0" ] ],
+    [ "r1:2", "led1:A", "green", [ "v0" ] ],
+    [ "led1:C", "esp:GND.2", "black", [ "v0" ] ],
+    [ "esp:19", "r1:1", "green", [ "h0" ] ],
+    [ "pir1:VCC", "esp:5V", "red", [ "v240" ] ],
+    [ "pir1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "pir1:OUT", "esp:34", "green", [ "v38.4", "h-374.54", "v67.2" ] ],
+    [ "btn1:1.l", "esp:GND.2", "black", [ "h-19.2", "v-57.6" ] ],
+    [ "btn1:2.l", "esp:17", "green", [ "v19.4", "h-153.6", "v-57.6" ] ],
+    [ "bz1:2", "esp:5", "green", [ "v163.2", "h-341.24" ] ],
+    [ "bz1:1", "esp:GND.2", "black", [ "v76.8", "h-38.4" ] ]
   ],
   "dependencies": {}
 }
