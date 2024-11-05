@@ -3,27 +3,26 @@
   "author": "Lucas Da Fonseca Costa",
   "editor": "wokwi",
   "parts": [
-    {
-      "type": "board-esp32-devkit-c-v4",
-      "id": "esp",
-      "top": -316.8,
-      "left": -292.76,
-      "attrs": {}
-    },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
     {
       "type": "wokwi-dht22",
       "id": "dht1",
-      "top": -450.9,
-      "left": -322.2,
-      "attrs": { "humidity": "100", "temperature": "80" }
-    }
+      "top": -134.1,
+      "left": -63,
+      "attrs": { "temperature": "75", "humidity": "9" }
+    },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -142.5, "left": 91.9, "attrs": {} }
   ],
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
     [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "esp:GND.2", "dht1:GND", "black", [ "h28.8", "v-67.2" ] ],
-    [ "dht1:SDA", "esp:23", "green", [ "v9.6", "h96.1", "v48", "h9.6" ] ],
-    [ "dht1:VCC", "esp:5V", "red", [ "v134.4", "h96", "v9.6" ] ]
+    [ "dht1:VCC", "esp:5V", "red", [ "v0" ] ],
+    [ "esp:GND.2", "dht1:GND", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp:23", "green", [ "v0" ] ],
+    [ "esp:GND.2", "ultrasonic1:GND", "black", [ "v-48", "h92.44" ] ],
+    [ "esp:5V", "ultrasonic1:VCC", "red", [ "h-4.61", "v48", "h144" ] ],
+    [ "esp:22", "ultrasonic1:TRIG", "green", [ "h0" ] ],
+    [ "ultrasonic1:ECHO", "esp:21", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }
