@@ -16,4 +16,4 @@ No começo do processo de irrigação o sensor LDR irá retornar o valor do flux
 
 
 ### Como usar
-Ir no site https://wokwi.com/  e selecionar a placa esp32, o código fonte está no arquivo sketch.ino e a biblioteca utilizada está no arquivo libraries.txt que estão na pasta src, o diagrama do projeto está na pasta docs, lá está um arquivo json que pode ser utilizado no site wokwi e um aquivo .png com a foto do diagrama.
+Ir no site [wokwi](https://wokwi.com/) e selecionar a placa esp32, o código fonte está no arquivo sketch.ino e a biblioteca utilizada está no arquivo libraries.txt que estão na pasta src, o diagrama do projeto está na pasta docs, lá está um arquivo json que pode ser utilizado no site [wokwi](https://wokwi.com/) e um aquivo .png com a foto do diagrama.
