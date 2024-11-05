@@ -14,3 +14,6 @@ O sensor PIR irá detectar pessoas e animais que estiverem no meio da plantaçã
 ### Sensor LDR
 No começo do processo de irrigação o sensor LDR irá retornar o valor do fluxo luminoso, caso esse valor seja inferior do que 150 o processo irá utilizar mais água, caso o valor seja maior que 200 o processo irá utilizar menos água.
 
+
+### Como usar
+Ir no site https://wokwi.com/  e selecionar a placa esp32, o código fonte está no arquivo sketch.ino e a biblioteca utilizada está no arquivo libraries.txt que estão na pasta src, o diagrama do projeto está na pasta docs, lá está um arquivo json que pode ser utilizado no site wokwi e um aquivo .png com a foto do diagrama.
