@@ -12,5 +12,5 @@ O Sensor HC-SR04 é utilizado para medir o volume de água dos reservatórios, e
 O sensor PIR irá detectar pessoas e animais que estiverem no meio da plantação, ele será colocado junto aos redores da plantação e junto com o sensor DHT, caso o sensor detecte alguém uma mensagem será enviada, um led e um buzzer será ativada alertando que o sensor detectou algo, para desativar as mensagens, o led e o buzzer um botão terá que ser pressionado.
 
 ### Sensor LDR
-No começo do processo de irrigação o sensor LDR irá retornar o valor do fluxo luminoso, caso esse valor seja superior 7500 o processo irá utilizar mais água, caso o valor seja menor que 1500 o processo irá utilizar menos água.
+No começo do processo de irrigação o sensor LDR irá retornar o valor do fluxo luminoso, caso esse valor seja inferior do que 150 o processo irá utilizar mais água, caso o valor seja maior que 200 o processo irá utilizar menos água.
 
